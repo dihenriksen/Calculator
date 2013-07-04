@@ -22,6 +22,8 @@ def doMath(operator, num1, num2)
 		else			
 			return num1.to_f % num2.to_f
 		end
+	when '**'
+		return num1.to_f ** num2.to_f
 	end
 end
 
@@ -47,7 +49,7 @@ while (true) do
 	operator = ''
 	num1 = ''
 	num2 = ''
-	valids = Set.new ['+','-','*','/','%']
+	valids = Set.new ['+','-','*','/','%','**']
 	until (valids.include?(operator)) do
 		puts "Enter operator"
 		operator = gets.chomp
